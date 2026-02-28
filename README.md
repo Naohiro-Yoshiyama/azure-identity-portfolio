@@ -11,9 +11,9 @@
 
 ## 構成
 
--Active Directory
--Microsoft Entra Connect(Active + Staging)
--Microsoft Entra ID
+- Active Directory
+- Microsoft Entra Connect(Active + Staging)
+- Microsoft Entra ID
 
 ### 検証内容
 
