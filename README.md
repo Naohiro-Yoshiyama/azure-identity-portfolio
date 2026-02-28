@@ -1,4 +1,4 @@
-# Azure Engineer Portforio
+# Azure Engineer Portfolio｜Hybrid Identity / Entra Connect 設計・検証
 本ポートフォリオは、Azure/Microsof Entra 領域における設計・構築検証スキルを示すためのドキュメント集です。
 ---
 ## 🔷 LB1 - Hybrid Identity(Microsoft Entra Connect)
