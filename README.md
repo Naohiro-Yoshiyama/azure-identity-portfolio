@@ -5,10 +5,6 @@
 
 オンプレミス Active DirectoryとMicrosoft Entra IDのハイブリッド構成設計および検証。
 
-## 🔷 LB1 - Hybrid Identity(Microsoft Entra Connect)
-
-オンプレミス Active DirectoryとMicrosoft Entra IDのハイブリッド構成設計および検証。
-
 ## 構成
 
 - Active Directory
