@@ -23,15 +23,12 @@ Active サーバー（mec01）から Staging サーバー（mec02）へ切替を
 
 ---
 
-# 3. Activeサーバー状態確認
+# 3. 切替前状態確認
 
 |試験ID|試験項目|試験手順|期待結果|結果|エビデンス|
 |---|---|---|---|---|---|
-|SW-001|Active状態確認|① mec01 にログインする<br>② PowerShell を起動する<br>③ `Get-ADSyncScheduler` を実行する<br>④ SyncCycleEnabled を確認する<br>⑤ `True` であることを確認する<br>⑥ StagingModeEnabled を確認する<br>⑦ `False` であることを確認する<br>⑧ スクリーンショット取得する|Active状態||SW-001_active_state.png|
+|SW-001|Activeサーバ状態確認|① mec01 にログインする<br>② PowerShell を起動する<br>③ Get-ADSyncScheduler を実行する<br>④ SyncCycleEnabled が True であることを確認する<br>⑤ StagingModeEnabled が False であることを確認する<br>⑥ スクリーンショット取得する|Active状態||SW-001_active_state.png|
 
----
-
-# 4. Stagingサーバー状態確認
 
 |試験ID|試験項目|試験手順|期待結果|結果|エビデンス|
 |---|---|---|---|---|---|
@@ -68,3 +65,4 @@ Active サーバー（mec01）から Staging サーバー（mec02）へ切替を
 |試験ID|試験項目|試験手順|期待結果|結果|エビデンス|
 |---|---|---|---|---|---|
 |SW-006|ユーザー同期確認|① addc01 にログインする<br>② Active Directory Users and Computers を開く<br>③ SyncUsers OU を開く<br>④ testuser02 を作成する<br>⑤ mec02 で Delta Sync を実行する<br>⑥ Azure Portal を開く<br>⑦ Entra ID → Users を開く<br>⑧ testuser02 が同期されていることを確認する<br>⑨ スクリーンショット取得する|同期成功||SW-006_user_sync.png|
+
