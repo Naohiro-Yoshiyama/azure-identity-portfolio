@@ -26,7 +26,7 @@ Delta同期は、変更されたオブジェクトのみを同期する処理で
 
 |試験ID|試験項目|試験手順|期待結果|結果|エビデンス|
 |---|---|---|---|---|---|
-|DELTA-001|ADユーザー属性変更|① addc01 にログインする<br>② Server Manager を開く<br>③ Tools をクリックする<br>④ Active Directory Users and Computers を起動する<br>⑤ `SyncUsers` OU を開く<br>⑥ testuser01 を右クリックする<br>⑦ Properties をクリックする<br>⑧ Display Name を変更する<br>⑨ OK をクリックする<br>⑩ 変更後画面をスクリーンショット取得する|属性変更成功||DELTA-001_ad_modify.png|
+|DELTA-001|ADユーザー属性変更|① addc01にログインする<br>② Active Directory Users and Computers を起動する<br>③ SyncUsers OUを開く<br>④ testuser01を右クリック → Propertices をクリックする<br>⑤ Display Name を変更する<br>⑥ OK をクリックする|属性変更成功|||
 
 ---
 
@@ -34,7 +34,7 @@ Delta同期は、変更されたオブジェクトのみを同期する処理で
 
 |試験ID|試験項目|試験手順|期待結果|結果|エビデンス|
 |---|---|---|---|---|---|
-|DELTA-002|Delta同期実行確認|① mec01 にログインする<br>② PowerShell を起動する<br>③ 以下のコマンドを実行する<br>`Start-ADSyncSyncCycle -PolicyType Delta`<br>④ コマンド実行結果を確認する<br>⑤ `Success` が表示されることを確認する<br>⑥ Synchronization Service Manager を起動する<br>⑦ Operations タブを確認する<br>⑧ Delta Import / Delta Sync / Export が実行されていることを確認する<br>⑨ スクリーンショット取得する|同期成功||DELTA-002_delta_sync.png|
+|DELTA-002|Delta同期実行確認|① mec01 にログインする<br>② PowerShell を起動する<br>③ Start-ADSyncSyncCycle -PolicyType Delta を実行する<br>④ Success が表示されることを確認する<br>⑤ Synchronization Service Manager の Operations タブで Delta Import / Delta Sync / Export が成功していることを確認する<br>⑥ スクリーンショット取得する|同期成功||DELTA-002_delta_sync.JPG|
 
 ---
 
@@ -42,7 +42,7 @@ Delta同期は、変更されたオブジェクトのみを同期する処理で
 
 |試験ID|試験項目|試験手順|期待結果|結果|エビデンス|
 |---|---|---|---|---|---|
-|DELTA-003|Connector Space更新確認|① mec01 にログインする<br>② Synchronization Service Manager を起動する<br>③ Connectors タブを開く<br>④ Active Directory Connector を選択する<br>⑤ Search Connector Space をクリックする<br>⑥ testuser01 を検索する<br>⑦ オブジェクトを開く<br>⑧ 属性変更内容が反映されていることを確認する<br>⑨ スクリーンショット取得する|属性更新確認||DELTA-003_connector.png|
+|DELTA-003|Connector Space更新確認|① Synchronization Service Manager を起動する<br>② Connectors タブ → Active Directory Connector → Search Connector Space をクリックする<br>③ testuser01 を検索してオブジェクトを開く<br>④ 属性変更内容が反映されていることを確認する<br>⑤ スクリーンショット取得する|属性更新確認||DELTA-003_connector.JPG|
 
 ---
 
@@ -50,7 +50,7 @@ Delta同期は、変更されたオブジェクトのみを同期する処理で
 
 |試験ID|試験項目|試験手順|期待結果|結果|エビデンス|
 |---|---|---|---|---|---|
-|DELTA-004|Metaverse更新確認|① Synchronization Service Manager を起動する<br>② Metaverse Search をクリックする<br>③ User を選択する<br>④ testuser01 を検索する<br>⑤ オブジェクトを開く<br>⑥ 属性一覧を確認する<br>⑦ DisplayName が変更されていることを確認する<br>⑧ スクリーンショット取得する|Metaverse更新||DELTA-004_metaverse.png|
+|DELTA-004|Metaverse更新確認|① Synchronization Service Manager → Metaverse Search をクリックする<br>② User を選択し testuser01 を検索する<br>③ オブジェクトを開き DisplayName が変更されていることを確認する<br>④ スクリーンショット取得する|Metaverse更新||DELTA-004_metaverse.JPG|
 
 ---
 
@@ -58,4 +58,5 @@ Delta同期は、変更されたオブジェクトのみを同期する処理で
 
 |試験ID|試験項目|試験手順|期待結果|結果|エビデンス|
 |---|---|---|---|---|---|
-|DELTA-005|Entra ID属性更新確認|① Azure Portal にアクセスする<br>② Microsoft Entra ID を開く<br>③ Users をクリックする<br>④ All Users を開く<br>⑤ testuser01 を検索する<br>⑥ ユーザー詳細を開く<br>⑦ Display Name を確認する<br>⑧ ADで変更した値と一致することを確認する<br>⑨ スクリーンショット取得する|属性更新反映||DELTA-005_entra_update.png|
+|DELTA-005|Entra ID属性更新確認|① Azure Portal → Microsoft Entra ID → Users → All Users を開く<br>② testuser01 を検索してユーザー詳細を開く<br>③ Display Name が AD で変更した値と一致することを確認する<br>④ スクリーンショット取得する|属性更新反映||DELTA-005_entra_update.JPG|
+
