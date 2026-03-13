@@ -1,4 +1,4 @@
-# Entra Connect Delta同期確認 試験仕様書兼結果報告書
+# Entra Connect Delta同期・属性同期確認 試験仕様書兼結果報告書
 
 ## 1. 試験概要
 
@@ -59,4 +59,5 @@ Delta同期は、変更されたオブジェクトのみを同期する処理で
 |試験ID|試験項目|試験手順|期待結果|結果|エビデンス|
 |---|---|---|---|---|---|
 |DELTA-005|Entra ID属性更新確認|① Azure Portal → Microsoft Entra ID → Users → All Users を開く<br>② testuser01 を検索してユーザー詳細を開く<br>③ Display Name が AD で変更した値と一致することを確認する<br>④ スクリーンショット取得する|属性更新反映||DELTA-005_entra_update.JPG|
+
 
